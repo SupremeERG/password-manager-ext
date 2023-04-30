@@ -1,0 +1,3 @@
+matches are the sites that content scripts are allowed to interact with;
+
+cant add onclick listeners with a popup file in manifest

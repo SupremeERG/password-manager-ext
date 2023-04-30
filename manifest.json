@@ -1,0 +1,39 @@
+{
+  "name": "FirstPass",
+  "version": "1.0.0",
+  "description": "Locally hosted password manager",
+  "manifest_version": 3,
+  "author": "Ethan Gartica",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "FirstPass",
+    "default_icon": "images/pm_logo.png"
+  },
+  "icons": {
+    "128": "images/pm_logo.png"
+  },
+  "permissions": [
+    "browsingData",
+    "cookies",
+    "webRequest",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/reading-time/reading-time.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
+}
