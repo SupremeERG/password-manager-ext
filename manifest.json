@@ -6,19 +6,18 @@
   "author": "Ethan Gartica",
   "action": {
     "default_popup": "index.html",
-    "default_title": "FirstPass",
+    "default_title": "RememberNot",
     "default_icon": "images/pm_logo.png"
   },
   "icons": {
     "128": "images/pm_logo.png"
   },
   "permissions": [
-    "browsingData",
-    "cookies",
     "webRequest",
     "activeTab",
     "scripting",
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -34,6 +33,6 @@
     }
   ],
   "background": {
-    "service_worker": "scripts/background.js"
+    "service_worker": "dist/background.js"
   }
 }
